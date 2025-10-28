@@ -1,3 +1,148 @@
-.cabeçalho {
-    background-color: rgb(98, 180, 212);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #6399eb;
+  color: #2e91b8;
+  line-height: 1.6;
+}
+
+/* ======== TOPO ======== */
+.topo {
+  background-color: #1295c9;
+  color: #0a82a7;
+  text-align: center;
+  padding: 20px;
+}
+
+.topo h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: #1badc0;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  border-bottom: 2px solid #2a2a2a;
+}
+
+/* ======== BANNER ======== */
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url("imagens/banner.jpg") center/cover no-repeat;
+  color: rgb(62, 129, 192);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.texto-banner h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.texto-banner p {
+  font-size: 1.1em;
+}
+
+/* ======== SEÇÕES ======== */
+.sessao {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.sessao h2 {
+  margin-bottom: 20px;
+  color: #117bac;
+  font-size: 1.7em;
+}
+
+.sessao p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* ======== CARDS ======== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #248697;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(51, 157, 206, 0.1);
+  width: 260px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ======== FORMULÁRIO ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #2b97c9;
+  border-radius: 5px;
+  background-color: #64a3f5;
+}
+
+button {
+  background-color: #117fd8;
+  color: rgb(82, 129, 216);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #4a719e;
+}
+
+/* ======== RODAPÉ ======== */
+.rodape {
+  background-color: #1584df;
+  color: #2f85cc;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }

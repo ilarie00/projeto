@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contato
+BNCC</title>
+<style>
+:root{--blue:#0b63d0; --light:#f6f9ff; --text:#222;}
+body{font-family: Arial, sans-serif; margin:0; background:var(--light); color:var(--text);}
+header{background:var(--blue); color:#fff; padding:14px 20px; text-align:center;}
+nav{background:#e8f1ff; padding:8px 20px; text-align:center;}
+nav a{color:var(--blue); text-decoration:none; margin:0 10px; font-weight:600;}
+.container{max-width:600px; margin:18px auto; padding:0 16px;}
+form{background:#fff; padding:16px; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+label{display:block; margin-top:10px; font-weight:600;}
+input[type="text"], input[type="email"], textarea{width:100%; padding:8px; margin-top:6px; border:1px solid #ccc; border-radius:4px;}
+button{margin-top:12px; padding:10px 14px; border:none; border-radius:6px; background:var(--blue); color:#fff; cursor:pointer;}
+footer{font-size:14px; text-align:center; padding:14px 10px; color:#555;}
+</style>
+</head>
+<body>
+<header><strong>Projeto BNCC</strong></header>
+<nav>
+<a href="inicio.html">Início</a>
+<a href="sobre.html">Sobre</a>
+<a href="conteudo.html">Conteúdo</a>
+<a href="contato.html">Contato</a>
+</nav>
+
+<div class="container">
+<h1>Contato</h1>
+<form action="#" method="post">
+<label for="nome">Nome</label>
+<input id="nome" name="nome" type="text" placeholder="Seu nome">
+
+<label for="email">E-mail</label>
+<input id="email" name="email" type="email" placeholder="seu@email.com">
+
+<label for="mensagem">Mensagem</label>
+<textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+
+<button type="submit">Enviar</button>
+</form>
+</div>
+
+<footer>© Projeto BNCC — Contato</footer>
+</body>
+</html>

@@ -12,35 +12,28 @@
         <h1>Matemática</h1>
     </div>
 
-    <!-- Botões principais (azul claro) -->
-    <div class="nav-buttons">
-        <a class="btn-blue" href="inicio.html">Início</a>
-        <a class="btn-blue" href="sobre.html">Sobre</a>
-        <a class="btn-blue" href="conteudo.html">Conteúdo</a>
-        <a class="btn-blue" href="contato.html">Contato</a>
+    <div class="menu">
+        <a href="inicio.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="conteudo.html">Conteúdo</a>
+        <a href="contato.html">Contato</a>
     </div>
 
-
+    <div class="acao">
+        <a class="btn" href="conteudo.html">Saiba mais</a>
+        <button id="contatoBtn" class="btn btn-primary" type="button">Entrar em contato</button>
+    </div>
 
     <h2> A matemática é a área que estuda números, formas e medidas. Ela permite fazer cálculos, entender padrões e resolver problemas do cotidiano, como medir, contar ou comparar valores. Além disso, desenvolve o raciocínio lógico e é essencial em diversas profissões e tecnologias que usamos no dia a dia.</h2>
 
-
-
     <p>Segundo a BNCC, a matemática vai além dos cálculos: ela ajuda a entender o mundo, desenvolver o raciocínio lógico e resolver problemas reais. Ao estudar números, operações, geometria, medidas, probabilidade e estatística, os alunos aprendem a interpretar informações, reconhecer padrões e tomar decisões. A ideia é que a matemática seja útil, prática e ligada ao cotidiano e à participação na sociedade.</p>
-
-
 
     <h2>A matemática estuda números, formas, medidas e padrões, ajudando a desenvolver o raciocínio lógico e a resolver problemas do dia a dia. Com conceitos como operações, álgebra, geometria, estatística e probabilidade, ela permite interpretar informações, identificar regularidades e tomar decisões. É uma ferramenta essencial para compreender o mundo, usar a tecnologia e participar de forma consciente na sociedade.</h2>
 
     <p>A matemática estuda números, formas e padrões, ajudando a entender o mundo e resolver problemas do dia a dia. Ela desenvolve o raciocínio lógico e permite analisar informações, fazer cálculos, interpretar gráficos e tomar decisões. Também é essencial para áreas como ciência, tecnologia e economia, tornando possível compreender fenômenos e organizar a vida prática.</p>
 
-    <div style="text-align: center;">
-        <img src="img/mat.png/mat.jpg" alt="Imagem relacionada à matemática">
-    </div>
+    <p><strong>Desenvolvido por Larissa</strong></p>
 
-    <P><strong>Desenvolvido por Larissa</strong> </P>
-    <script>
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

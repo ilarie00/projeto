@@ -1,87 +1,126 @@
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff; /* azul clarinho */
-            color: #4da6ff; /* azul claro do título */
-            margin: 0;
-            padding: 0;
-        }
+/* Fonte e cores */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* azul clarinho */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
 
-        .cabeçalho {
-            background-color: #4da6ff; /* azul mais claro */
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
+/* Cabeçalho */
+.cabeçalho {
+    background-color: #4da6ff; /* azul claro */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
-        .cabeçalho h1 {
-            font-size: 3.5em;
-            margin: 10px 0;
-        }
+.cabeçalho h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
 
-        .menu {
-            display: flex;
-            justify-content: center;
-            background-color: #66b3ff; /* azul mais claro */
-            padding: 10px 0;
-        }
+.cabeçalho .subtitulo {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
 
-        .menu a {
-            color: white;
-            text-decoration:double;
-            margin: 0 20px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* Banner com overlay */
+.banner {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
 
-        .menu a:hover {
-            color: #ff0202; /* amarelo no hover */
-        }
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 1.5s ease;
+}
 
-        h1, h2 {
-            margin: 20px;
-        }
+.banner:hover img {
+    transform: scale(1.05);
+}
 
-        h2 {
-            color: #4da6ff; /* azul claro do título */
-        }
+.banner .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    animation: fadeIn 2s ease forwards;
+}
 
-        p {
-            margin: 20px;
-            line-height: 1.6;
-        }
+/* Botões de navegação */
+.nav-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
 
-        strong {
-            display: block;
-            margin: 30px 20px;
-            text-align: center;
-            font-size: 1.1em;
-        }
-        
-        /* Botões principais para navegação (azul claro) */
-        .nav-buttons {
-            text-align: center;
-            padding: 12px 0;
-            background: transparent;
-            margin-bottom: 6px;
-        }
+.btn-blue {
+    display: inline-block;
+    padding: 14px 25px;
+    margin: 6px;
+    border-radius: 8px;
+    background: #4da6ff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #4da6ff;
+    transition: all 0.3s ease;
+}
 
-        .btn-blue {
-            display: inline-block;
-            padding: 10px 16px;
-            margin: 6px;
-            border-radius: 8px;
-            background: #4da6ff; /* azul claro do título */
-            color: white; /* texto branco */
-            text-decoration: none;
-            font-weight: 700;
-            border: 2px solid #4da6ff;
-            transition: background-color 0.15s, transform 0.08s;
-        }
+.btn-blue:hover {
+    background: #2d7acc;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
-        .btn-blue:hover {
-            background: #2d7acc;
-            transform: translateY(-2px);
-        }
-    
+/* Conteúdo em cards */
+.conteudo {
+    max-width: 1000px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    color: #4da6ff;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Animação fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translate(-50%, -60%);}
+    100% { opacity: 1; transform: translate(-50%, -50%);}
+}

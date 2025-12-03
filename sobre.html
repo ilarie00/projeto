@@ -1,48 +1,213 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Sobre
-BNCC</title>
+<title>Sobre BNCC</title>
+<link rel="stylesheet" href="style.css">
 <style>
-:root{--blue:#0b63d0; --light:#f6f9ff; --text:#222;}
-body{font-family: Arial, sans-serif; margin:0; background:var(--light); color:var(--text);}
-header{background:var(--blue); color:#fff; padding:14px 20px; text-align:center;}
-nav{background:#e8f1ff; padding:8px 20px; text-align:center;}
-nav a{color:var(--blue); text-decoration:none; margin:0 10px; font-weight:600;}
-.container{max-width:900px; margin:18px auto; padding:0 16px;}
-footer{font-size:14px; text-align:center; padding:14px 10px; color:#555;}
+/* Variáveis de cor */
+:root {
+    --blue: #4da6ff; /* azul claro */
+    --darkblue: #2d7acc; /* azul escuro para hover */
+    --light: #f0f8ff; /* fundo */
+    --text: #222;
+}
 
-/* Botão voltar (azul claro) */
-.voltar{ text-align:center; margin:18px 0; }
-.btn-blue{ display:inline-block; padding:10px 16px; border-radius:8px; background:#bfe8ff; color:var(--blue); text-decoration:none; font-weight:700; border:2px solid #9fd4ff; }
-.btn-blue:hover{ background:#9fdcff; }
+/* Reset e fonte */
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+/* Banner com overlay */
+.banner {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 1.5s ease;
+}
+
+.banner:hover img {
+    transform: scale(1.05);
+}
+
+.banner .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Botões de navegação */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 12px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--darkblue);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Conteúdo em cards */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+/* Botão voltar */
+.voltar {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-blue {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #bfe8ff; 
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid #9fd4ff;
+    transition: all 0.3s ease;
+}
+
+.btn-blue:hover {
+    background: #9fdcff;
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translate(-50%, -60%);}
+    100% { opacity: 1; transform: translate(-50%, -50%);}
+}
 </style>
 </head>
 <body>
-<header><strong>Projeto BNCC</strong></header>
+
+<header>
+    <h1>Sobre a BNCC</h1>
+</header>
+
+<!-- Banner com imagem -->
+<div class="banner">
+    <img src="https://via.placeholder.com/1200x300/4da6ff/ffffff?text=BNCC" alt="Banner BNCC">
+    <div class="overlay">Aprenda sobre a Base Nacional Comum Curricular</div>
+</div>
+
+<!-- Navegação (sem botão Início) -->
 <nav>
-<a href="inicio.html">Início</a>
-<a href="sobre.html">Sobre</a>
-<a href="conteudo.html">Conteúdo</a>
-<a href="contato.html">Contato</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="conteudo.html">Conteúdo</a>
+    <a href="contato.html">Contato</a>
 </nav>
 
+<!-- Conteúdo em cards -->
 <div class="container">
-<h1>O que é a BNCC?</h1>
-<p>A BNCC (Base Nacional Comum Curricular) define competências e conteúdos essenciais que todas as escolas do Brasil devem considerar. Ela orienta professores e escolas para garantir uma formação mais uniforme e de qualidade.</p>
+    <div class="card">
+        <h2>O que é a BNCC?</h2>
+        <p>A BNCC (Base Nacional Comum Curricular) define competências e conteúdos essenciais que todas as escolas do Brasil devem considerar. Ela orienta professores e escolas para garantir uma formação mais uniforme e de qualidade.</p>
+    </div>
 
-<h2>Importância</h2>
-<ul>
-<li>Garante aprendizagens essenciais para todos os estudantes.</li>
-<li>Ajuda a orientar planos de aula e avaliações.</li>
-<li>Promove competências socioemocionais e cognitivas.</li>
-</ul>
+    <div class="card">
+        <h2>Importância</h2>
+        <ul>
+            <li>Garante aprendizagens essenciais para todos os estudantes.</li>
+            <li>Ajuda a orientar planos de aula e avaliações.</li>
+            <li>Promove competências socioemocionais e cognitivas.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Aplicações práticas</h2>
+        <p>Ao seguir a BNCC, professores podem planejar aulas mais eficazes, alinhadas às competências do século XXI, garantindo que os alunos desenvolvam habilidades essenciais de forma consistente e integrada.</p>
+    </div>
 </div>
-<!-- Botão para voltar à página principal -->
-<div class="voltar" style="text-align:center; margin:18px 0;">
-	<a class="btn-blue" href="index.html">Voltar à página principal</a>
+
+<!-- Botão voltar -->
+<div class="voltar">
+    <a class="btn-blue" href="index.html">Voltar à página principal</a>
 </div>
+
 </body>
 </html>

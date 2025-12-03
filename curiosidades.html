@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Contato BNCC</title>
+<title>Curiosidades BNCC</title>
 <style>
 /* Variáveis de cor */
 :root {
@@ -60,69 +60,41 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Container do formulário */
+/* Container de curiosidades */
 .container {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
     padding: 0 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s forwards;
 }
 
-/* Formulário estilizado */
-form {
+/* Cards de curiosidades */
+.card {
     background: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
 }
 
-form:hover {
-    transform: translateY(-5px);
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
+.card:hover {
+    transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-}
-
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    transition: border 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: var(--blue);
-    outline: none;
-}
-
-/* Botão enviar */
-button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    background: var(--blue);
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background: var(--darkblue);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.card h2 {
+    color: var(--blue);
+    margin-bottom: 15px;
 }
 
 /* Botão voltar */
@@ -148,7 +120,7 @@ button:hover {
     transform: translateY(-3px) scale(1.05);
 }
 
-/* Animação */
+/* Animação cards */
 @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
 }
@@ -157,7 +129,7 @@ button:hover {
 <body>
 
 <header>
-    <h1>Contato BNCC</h1>
+    <h1>Curiosidades sobre a BNCC</h1>
 </header>
 
 <!-- Navegação -->
@@ -165,23 +137,30 @@ button:hover {
     <a href="sobre.html">Sobre</a>
     <a href="conteudo.html">Conteúdo</a>
     <a href="contato.html">Contato</a>
+    <a href="curiosidades.html">Curiosidades</a>
 </nav>
 
-<!-- Formulário -->
+<!-- Cards de curiosidades -->
 <div class="container">
-<h2>Entre em contato</h2>
-<form action="#" method="post">
-<label for="nome">Nome</label>
-<input id="nome" name="nome" type="text" placeholder="Seu nome">
+    <div class="card">
+        <h2>Curiosidade 1</h2>
+        <p>A BNCC foi criada para unificar o ensino no Brasil, garantindo que todas as crianças aprendam as mesmas competências essenciais, independente da escola.</p>
+    </div>
 
-<label for="email">Gmail</label>
-<input id="email" name="email" type="email" placeholder="seu@gmail.com">
+    <div class="card">
+        <h2>Curiosidade 2</h2>
+        <p>Ela não se limita a conteúdos acadêmicos: a BNCC também inclui competências socioemocionais, como empatia, colaboração e pensamento crítico.</p>
+    </div>
 
-<label for="mensagem">Mensagem</label>
-<textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+    <div class="card">
+        <h2>Curiosidade 3</h2>
+        <p>A BNCC serve de base para a elaboração de livros didáticos, planejamentos escolares e avaliações nacionais, influenciando diretamente o cotidiano escolar.</p>
+    </div>
 
-<button type="submit">Enviar</button>
-</form>
+    <div class="card">
+        <h2>Curiosidade 4</h2>
+        <p>Ela foi aprovada pelo Ministério da Educação e por especialistas em diversas áreas, garantindo alinhamento entre diferentes níveis de ensino.</p>
+    </div>
 </div>
 
 <!-- Botão voltar -->
